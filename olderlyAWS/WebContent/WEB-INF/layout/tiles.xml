@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="base" template="/WEB-INF/layout/page.jsp">
+		<put-attribute name="header" value="/WEB-INF/layout/header.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"></put-attribute>
+		<put-attribute name="includes" value=""></put-attribute>
+	</definition>
+
+	<definition name="accessdenied" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/accessdenied.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/admin.jsp"></put-attribute>
+	</definition>
+
+	<definition name="assignments" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/assignments.jsp"></put-attribute>
+	</definition>
+
+	<definition name="clients" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/clients.jsp"></put-attribute>
+	</definition>
+
+	<definition name="createassignment" extends="base">
+		<put-attribute name="body"
+			value="/WEB-INF/views/createassignment.jsp"></put-attribute>
+	</definition>
+
+	<definition name="editassignment" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/editassignment.jsp"></put-attribute>
+	</definition>
+
+	<definition name="editclient" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/editclient.jsp"></put-attribute>
+	</definition>
+
+	<definition name="home" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/home.jsp"></put-attribute>
+	</definition>
+
+	<definition name="loggedout" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/loggedout.jsp"></put-attribute>
+	</definition>
+
+	<definition name="login" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp"></put-attribute>
+	</definition>
+
+	<definition name="myassignments" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/myassignments.jsp"></put-attribute>
+	</definition>
+
+	<definition name="newaccount" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/newaccount.jsp"></put-attribute>
+		<put-attribute name="includes"
+			value="/WEB-INF/views/newaccountscript.jsp"></put-attribute>
+	</definition>
+
+	<definition name="myaccount" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/myaccount.jsp"></put-attribute>
+		<put-attribute name="includes"
+			value="/WEB-INF/views/newaccountscript.jsp"></put-attribute>
+	</definition>
+
+	<definition name="newclient" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/newclient.jsp"></put-attribute>
+	</definition>
+
+	<definition name="accountcreated" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/accountcreated.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="accountupdated" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/accountupdated.jsp"></put-attribute>
+	</definition>
+
+	<definition name="accountdeleted" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/accountdeleted.jsp"></put-attribute>
+	</definition>
+
+	<definition name="volunteers" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/volunteers.jsp"></put-attribute>
+	</definition>
+
+	<definition name="about" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/about.jsp"></put-attribute>
+	</definition>
+
+</tiles-definitions>

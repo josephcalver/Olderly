@@ -1,0 +1,113 @@
+@CHARSET "UTF-8";
+
+#body {
+	padding-top: 100px;
+}
+
+.navbar .navbar-brand {
+	font-size: x-large;
+}
+
+.navbar .navbar-nav {
+	padding-top: 3px;
+}
+
+.navbar .btn {
+	color: white;
+	border-color: white;
+}
+
+.jumbotron {
+	background-image: url('../images/jumbotronbackground.jpg');
+	background-size: cover;
+	min-height: 650px;
+}
+
+.jumbotron .jumbotron-text {
+	margin-top: 30%;
+	color: white;
+}
+
+.jumbotron .btn {
+	color: white;
+}
+
+.home-page-text {
+	color: #0275D8;
+	text-align: center;
+}
+
+.frame {
+	border-radius: 25px;
+	border: 1px #0275D8 solid;
+	padding: 35px;
+}
+
+.frame .btn {
+	margin-bottom: -25px;
+}
+
+.page-heading {
+	text-align: center;
+	color: #0275D8;
+}
+
+.label {
+	text-align: right;
+	text-vertical-align: top;
+}
+
+input[type=text] {
+	width: 250px;
+	padding-left: 20px;
+}
+
+input[type=password] {
+	width: 250px;
+	padding-left: 20px;
+}
+
+textarea {
+	width: 150px;
+	height: 400px;
+}
+
+.error {
+	font-size: small;
+	color: red;
+	left-margin: 10px;
+}
+
+.offers {
+	padding: 10px;
+	border: 1px solid grey;
+}
+
+p.error {
+	color: red;
+	font-size: medium;
+}
+
+.valid {
+	font-size: small;
+	color: green;
+	left-margin: 10px;
+}
+
+input.delete {
+	border: 1px solid red;
+}
+
+.copyright {
+	font-size: small;
+	text-align: center;
+}
+
+#footer {
+	margin-top: 20%;
+	position: relative;
+	left: 0px;
+	bottom: 40px;
+	height: 30px;
+	width: 100%;
+}
