@@ -47,20 +47,22 @@ public class VolunteersDao {
 
 		params.addValue("username", username);
 
-		return jdbc.query("select * from assignments where volunteer=:username", params, new RowMapper<Assignment>() {
+		return jdbc.query(
+				"select * from assignments join clients on clients.id=assignments.client_id where volunteer=:username",
+				params, new RowMapper<Assignment>() {
 
-			public Assignment mapRow(ResultSet rs, int RowNum) throws SQLException {
-				Assignment assignment = new Assignment();
+					public Assignment mapRow(ResultSet rs, int RowNum) throws SQLException {
+						Assignment assignment = new Assignment();
 
-				assignment.setId(rs.getInt("id"));
-				assignment.setDate(rs.getString("date"));
-				assignment.setTime(rs.getString("time"));
-				assignment.setDuration(rs.getString("duration"));
-				assignment.setDescription(rs.getString("description"));
+						assignment.setId(rs.getInt("id"));
+						assignment.setDate(rs.getString("date"));
+						assignment.setTime(rs.getString("time"));
+						assignment.setDuration(rs.getString("duration"));
+						assignment.setDescription(rs.getString("description"));
 
-				return assignment;
-			}
-		});
+						return assignment;
+					}
+				});
 	}
 
 	/*

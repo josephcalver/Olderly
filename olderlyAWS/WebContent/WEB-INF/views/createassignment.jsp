@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <div class="container">
 
@@ -87,6 +88,17 @@
 					<div class="error">
 						<sf:errors path="duration"></sf:errors>
 					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="client" class="col-sm-2 col-form-label">Client:</label>
+				<div class="col-sm-8">
+					<sf:select class="form-control" path="clientId" type="text" name="clientId"
+						id="clientId">
+						<c:forEach var="client" items="${clients}">
+							<sf:option value="${client.id}" label="${client.firstName} ${client.lastName}"/>
+						</c:forEach>
+					</sf:select>
 				</div>
 			</div>
 			<div class="form-group row">

@@ -19,7 +19,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.josephcalver.olderly.models.Assignment;
+import com.josephcalver.olderly.models.Client;
 import com.josephcalver.olderly.service.AssignmentsService;
+import com.josephcalver.olderly.service.ClientsService;
 
 @Controller
 public class AssignmentsController {
@@ -46,6 +48,8 @@ public class AssignmentsController {
 
 	@RequestMapping("/createassignment")
 	public String createAssignment(Model model) {
+		List<Client> clients = assignmentsService.getAllClients();
+		model.addAttribute("clients", clients);
 		model.addAttribute("assignment", new Assignment());
 		return "createassignment";
 	}

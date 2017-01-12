@@ -19,7 +19,7 @@
 </div>
 <br />
 <sec:authorize var="userLoggedIn" access="hasRole('ROLE_USER')" />
-<sec:authorize var="adminLoggedIn" access="hasRole('ROLE_ADMIN')" />
+<sec:authorize var="adminLoggedIn" access="hasAnyRole('ADMIN', 'GUEST')" />
 <c:choose>
 	<c:when test="${userLoggedIn}">
 		<div class="container-fluid">

@@ -14,6 +14,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.josephcalver.olderly.models.Assignment;
+import com.josephcalver.olderly.models.Client;
 
 @Component
 public class AssignmentsDao {
@@ -28,7 +29,7 @@ public class AssignmentsDao {
 	public boolean create(Assignment assignment) {
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(assignment);
 		return jdbc.update(
-				"insert into assignments (date, time, duration, description) values (date_format(:date, '%d/%m/%Y'), :time, :duration, :description)",
+				"insert into assignments (date, time, duration, description, client_id) values (date_format(:date, '%d/%m/%Y'), :time, :duration, :description, :clientId)",
 				params) == 1;
 	}
 
@@ -85,5 +86,22 @@ public class AssignmentsDao {
 		MapSqlParameterSource params = new MapSqlParameterSource("id", id);
 
 		return jdbc.update("delete from assignments where id=:id", params) == 1;
+	}
+	
+	public List<Client> getAllClients() {		
+		return jdbc.query("select * from clients order by lastname", new RowMapper<Client>() {
+
+			public Client mapRow(ResultSet rs, int rowNum) throws SQLException {
+				Client client = new Client();
+
+				client.setId(rs.getInt("id"));
+				client.setFirstName(rs.getString("firstname"));
+				client.setLastName(rs.getString("lastname"));
+				client.setAddress(rs.getString("address"));
+				client.setTelephone(rs.getString("telephone"));
+
+				return client;
+			}
+		});
 	}
 }

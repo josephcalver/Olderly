@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.josephcalver.olderly.dao.AssignmentsDao;
 import com.josephcalver.olderly.models.Assignment;
+import com.josephcalver.olderly.models.Client;
 
 @Service("assignmentsService")
 public class AssignmentsService {
@@ -43,6 +44,11 @@ public class AssignmentsService {
 	@Secured("ROLE_ADMIN")
 	public void delete(int id) {
 		assignmentsDao.delete(id);
+	}
+	
+	@Secured("ROLE_ADMIN")
+	public List<Client> getAllClients() {
+		return assignmentsDao.getAllClients();
 	}
 
 }

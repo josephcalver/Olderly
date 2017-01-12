@@ -65,7 +65,7 @@ public class ClientsDao {
 		});
 	}
 
-	public List<Client> getAllClients() {
+	public List<Client> getAllClients() {		
 		return jdbc.query("select * from clients order by lastname", new RowMapper<Client>() {
 
 			public Client mapRow(ResultSet rs, int rowNum) throws SQLException {

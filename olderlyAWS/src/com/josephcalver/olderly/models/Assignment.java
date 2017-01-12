@@ -1,7 +1,5 @@
 package com.josephcalver.olderly.models;
 
-import java.util.Date;
-
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -26,21 +24,26 @@ public class Assignment {
 
 	private String volunteer;
 
+	private int clientId;
+
 	public Assignment() {
 
 	}
 
-	public Assignment(String date, String time, String description) {
+	public Assignment(String date, String time, String duration, String description, int clientId) {
 		this.date = date;
 		this.time = time;
+		this.duration = duration;
 		this.description = description;
+		this.clientId = clientId;
 	}
 
-	public Assignment(int id, String date, String time, String description) {
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
 		this.id = id;
-		this.date = date;
-		this.time = time;
-		this.description = description;
 	}
 
 	public String getDate() {
@@ -83,18 +86,18 @@ public class Assignment {
 		this.volunteer = volunteer;
 	}
 
-	public int getId() {
-		return id;
+	public int getClientId() {
+		return clientId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setClientId(int clientId) {
+		this.clientId = clientId;
 	}
 
 	@Override
 	public String toString() {
 		return "Assignment [id=" + id + ", date=" + date + ", time=" + time + ", duration=" + duration
-				+ ", description=" + description + ", volunteer=" + volunteer + "]";
+				+ ", description=" + description + ", volunteer=" + volunteer + ", clientId=" + clientId + "]";
 	}
 
 }

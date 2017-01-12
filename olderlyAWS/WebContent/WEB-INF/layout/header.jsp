@@ -19,7 +19,7 @@
 					href="<c:url value='/assignments'/>">View All Assignments</a></li>
 			</sec:authorize>
 
-			<sec:authorize access="hasRole('ROLE_USER')">
+			<sec:authorize access="hasAnyRole('USER', 'GUEST')">
 				<li class="nav-item"><a class="nav-link"
 					href="<c:url value='/myassignments'/>">My Assignments</a></li>
 			</sec:authorize>

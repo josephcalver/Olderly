@@ -40,7 +40,7 @@
 					<dt class="offset-sm-3"></dt>
 					<dd class="offset-sm-3 col-sm-1">
 						<br />
-						<sec:authorize access="hasRole('ROLE_USER')">
+						<sec:authorize access="hasAnyRole('USER', 'GUEST')">
 							<c:url var="volunteerUrl" value="/volunteer" />
 							<sf:form action="${volunteerUrl}" method="post">
 								<input class="btn btn-primary" type="submit" value="Volunteer!" />

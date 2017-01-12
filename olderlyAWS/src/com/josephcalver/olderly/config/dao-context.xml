@@ -11,7 +11,7 @@
 	<context:component-scan base-package="com.josephcalver.olderly.dao">
 	</context:component-scan>
 
-	<jee:jndi-lookup jndi-name="jdbc/olderly" id="dataSource"
+	<jee:jndi-lookup jndi-name="jdbc/olderlyAWS" id="dataSource"
 		expected-type="javax.sql.DataSource">
 	</jee:jndi-lookup>
 
