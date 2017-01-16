@@ -111,3 +111,12 @@ input.delete {
 	height: 30px;
 	width: 100%;
 }
+
+.about-text {
+	font-size: larger;
+	text-align: center;
+}
+
+.about-bullets {
+	font-size: larger;
+}

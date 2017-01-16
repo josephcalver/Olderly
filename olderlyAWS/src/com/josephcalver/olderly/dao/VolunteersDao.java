@@ -73,6 +73,6 @@ public class VolunteersDao {
 		MapSqlParameterSource params = new MapSqlParameterSource("username", username);
 
 		return jdbc.update("update assignments set volunteer = NULL where volunteer=:username", params) == 1;
-
 	}
+	
 }

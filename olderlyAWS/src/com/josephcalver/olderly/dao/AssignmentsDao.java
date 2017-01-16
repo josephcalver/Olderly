@@ -87,8 +87,8 @@ public class AssignmentsDao {
 
 		return jdbc.update("delete from assignments where id=:id", params) == 1;
 	}
-	
-	public List<Client> getAllClients() {		
+
+	public List<Client> getAllClients() {
 		return jdbc.query("select * from clients order by lastname", new RowMapper<Client>() {
 
 			public Client mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -104,4 +104,5 @@ public class AssignmentsDao {
 			}
 		});
 	}
+	
 }

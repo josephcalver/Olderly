@@ -43,4 +43,5 @@ public class VolunteersController {
 		model.addAttribute("myAssignments", myAssignments);
 		return "myassignments";
 	}
+	
 }

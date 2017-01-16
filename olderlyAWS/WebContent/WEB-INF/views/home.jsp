@@ -60,7 +60,7 @@
 		<div class="container-fluid">
 			<div class="offset-sm-3">
 				<div class="col-sm-8 h1 home-page-text">
-					<p>Want to know how you could help older people in your area?</p>
+					<p>What is Olderly, and how does it work?</p>
 					<br />
 					<p>
 						<a class="btn btn-primary btn-lg" role="button"

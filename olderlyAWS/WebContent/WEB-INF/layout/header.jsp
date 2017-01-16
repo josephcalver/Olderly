@@ -46,6 +46,11 @@
 
 			<sec:authorize access="!isAuthenticated()">
 				<li class="nav-item"><a class="btn btn-outline-secondary"
+					href="<c:url value='/preview'/>">PREVIEW</a></li>
+			</sec:authorize>
+
+			<sec:authorize access="!isAuthenticated()">
+				<li class="nav-item"><a class="btn btn-outline-secondary"
 					href="<c:url value='/newaccount'/>">Create Account</a></li>
 			</sec:authorize>
 

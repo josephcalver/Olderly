@@ -14,8 +14,8 @@
 		<put-attribute name="body" value="/WEB-INF/views/accessdenied.jsp"></put-attribute>
 	</definition>
 
-	<definition name="admin" extends="base">
-		<put-attribute name="body" value="/WEB-INF/views/admin.jsp"></put-attribute>
+	<definition name="preview" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/preview.jsp"></put-attribute>
 	</definition>
 
 	<definition name="assignments" extends="base">
@@ -74,7 +74,7 @@
 	<definition name="accountcreated" extends="base">
 		<put-attribute name="body" value="/WEB-INF/views/accountcreated.jsp"></put-attribute>
 	</definition>
-	
+
 	<definition name="accountupdated" extends="base">
 		<put-attribute name="body" value="/WEB-INF/views/accountupdated.jsp"></put-attribute>
 	</definition>

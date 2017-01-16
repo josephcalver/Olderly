@@ -1,4 +1,4 @@
 <div class="copyright">
-Copyright &copy; 2016 Joseph Calver </br>
+Copyright &copy; 2017 Joseph Calver </br>
 www.josephcalver.com
 </div>

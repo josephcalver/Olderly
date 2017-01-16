@@ -67,16 +67,9 @@ public class UsersDao {
 				user.setEmail(rs.getString("email"));
 
 				return user;
-
 			}
 		});
 	}
-
-	/*
-	 * public List<User> getAllUsers() { return
-	 * jdbc.query("select * from users",
-	 * BeanPropertyRowMapper.newInstance(User.class)); }
-	 */
 
 	public List<User> getAllVolunteers() {
 
@@ -122,5 +115,5 @@ public class UsersDao {
 
 		return jdbc.update("delete from users where username=:username", params) == 1;
 	}
-
+	
 }

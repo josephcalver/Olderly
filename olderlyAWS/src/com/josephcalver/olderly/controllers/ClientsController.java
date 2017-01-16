@@ -70,4 +70,5 @@ public class ClientsController {
 		clientsService.update(client);
 		return "redirect:clients";
 	}
+	
 }

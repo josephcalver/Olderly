@@ -135,5 +135,5 @@ public class Assignment {
 		return "Assignment [id=" + id + ", date=" + date + ", time=" + time + ", duration=" + duration
 				+ ", description=" + description + ", volunteer=" + volunteer + ", clientId=" + clientId + "]";
 	}
-
+	
 }

@@ -37,4 +37,9 @@ public class HomeController {
 		return "about";
 	}
 
+	@RequestMapping("/preview")
+	public String showPreview() {
+		return "preview";
+	}
+
 }

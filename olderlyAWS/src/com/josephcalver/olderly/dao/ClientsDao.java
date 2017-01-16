@@ -96,5 +96,5 @@ public class ClientsDao {
 
 		return jdbc.update("delete from clients where id=:id", params) == 1;
 	}
-
+	
 }
