@@ -54,10 +54,25 @@
 						<c:out value="${assignment.description}"></c:out>
 					</dd>
 
+					<dt class="col-sm-3">Client Name:</dt>
+					<dd class="col-sm-9">
+						<c:out value="${assignment.firstName} ${assignment.lastName}"></c:out>
+					</dd>
+
+					<dt class="col-sm-3">Client Address:</dt>
+					<dd class="col-sm-9">
+						<c:out value="${assignment.address}"></c:out>
+					</dd>
+
+					<dt class="col-sm-3">Client Phone:</dt>
+					<dd class="col-sm-9">
+						<c:out value="${assignment.telephone}"></c:out>
+					</dd>
+
 					<dt class="offset-sm-3"></dt>
 					<dd class="offset-sm-3 col-sm-1">
 						<br />
-						<sec:authorize access="hasRole('ROLE_USER')">
+						<sec:authorize access="hasAnyRole('USER', 'GUEST_USER')">
 							<c:url var="cancelUrl" value="/cancel" />
 							<sf:form action="${cancelUrl}" method="post">
 								<input class="btn btn-primary" type="submit" id="cancel"

@@ -25,7 +25,7 @@ public class AssignmentsService {
 		assignmentsDao.create(assignment);
 	}
 
-	@Secured("ROLE_ADMIN")
+	@Secured({ "ROLE_ADMIN", "ROLE_GUEST_ADMIN" })
 	public Assignment getAssignment(int id) {
 		Assignment assignment = assignmentsDao.getAssignment(id);
 		return assignment;
@@ -46,7 +46,7 @@ public class AssignmentsService {
 		assignmentsDao.delete(id);
 	}
 	
-	@Secured("ROLE_ADMIN")
+	@Secured({ "ROLE_ADMIN", "ROLE_GUEST_ADMIN" })
 	public List<Client> getAllClients() {
 		return assignmentsDao.getAllClients();
 	}

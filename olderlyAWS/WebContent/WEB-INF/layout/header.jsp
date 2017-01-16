@@ -19,27 +19,27 @@
 					href="<c:url value='/assignments'/>">View All Assignments</a></li>
 			</sec:authorize>
 
-			<sec:authorize access="hasAnyRole('USER', 'GUEST')">
+			<sec:authorize access="hasAnyRole('USER', 'GUEST_USER')">
 				<li class="nav-item"><a class="nav-link"
 					href="<c:url value='/myassignments'/>">My Assignments</a></li>
 			</sec:authorize>
 
-			<sec:authorize access="hasRole('ROLE_ADMIN')">
+			<sec:authorize access="hasAnyRole('ADMIN', 'GUEST_ADMIN')">
 				<li class="nav-item"><a class="nav-link"
 					href="<c:url value='/createassignment'/>">Add New Assignment</a></li>
 			</sec:authorize>
 
-			<sec:authorize access="hasRole('ROLE_ADMIN')">
+			<sec:authorize access="hasAnyRole('ADMIN', 'GUEST_ADMIN')">
 				<li class="nav-item"><a class="nav-link"
 					href="<c:url value='/clients'/>">View All Clients</a></li>
 			</sec:authorize>
 
-			<sec:authorize access="hasRole('ROLE_ADMIN')">
+			<sec:authorize access="hasAnyRole('ADMIN', 'GUEST_ADMIN')">
 				<li class="nav-item"><a class="nav-link"
 					href="<c:url value='/newclient'/>">Add New Client</a></li>
 			</sec:authorize>
 
-			<sec:authorize access="hasRole('ROLE_ADMIN')">
+			<sec:authorize access="hasAnyRole('ADMIN', 'GUEST_ADMIN')">
 				<li class="nav-item"><a class="nav-link"
 					href="<c:url value='/volunteers'/>">View All Volunteers</a></li>
 			</sec:authorize>

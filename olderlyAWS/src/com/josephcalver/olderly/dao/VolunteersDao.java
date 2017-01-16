@@ -59,21 +59,15 @@ public class VolunteersDao {
 						assignment.setTime(rs.getString("time"));
 						assignment.setDuration(rs.getString("duration"));
 						assignment.setDescription(rs.getString("description"));
+						assignment.setFirstName(rs.getString("firstname"));
+						assignment.setLastName(rs.getString("lastname"));
+						assignment.setAddress(rs.getString("address"));
+						assignment.setTelephone(rs.getString("telephone"));
 
 						return assignment;
 					}
 				});
 	}
-
-	/*
-	 * public boolean cancelMyAssignments(String currentUser) {
-	 * MapSqlParameterSource params = new MapSqlParameterSource("currentUser",
-	 * currentUser);
-	 * 
-	 * return jdbc.update(
-	 * "update assignments set volunteer = NULL where volunteer=:currentUser",
-	 * params) == 1; }
-	 */
 
 	public boolean cancelAllAssignments(String username) {
 		MapSqlParameterSource params = new MapSqlParameterSource("username", username);

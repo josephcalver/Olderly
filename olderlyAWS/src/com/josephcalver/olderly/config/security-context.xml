@@ -42,44 +42,41 @@
 		<security:intercept-url pattern="/assignments"
 			access="isAuthenticated()" />
 		<security:intercept-url pattern="/docreate"
-			access="isAuthenticated()" />
+			access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/assignmentcreated"
-			access="isAuthenticated()" />
+			access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/myaccount"
 			access="isAuthenticated()" />
 		<security:intercept-url pattern="/updateaccount"
-			access="isAuthenticated()" />
+			access="hasAnyRole('USER', 'ADMIN')" />
 		<security:intercept-url pattern="/volunteer"
 			access="hasRole('ROLE_USER')" />
 		<security:intercept-url pattern="/myassignments"
-			access="hasAnyRole('USER', 'GUEST')" />
+			access="hasAnyRole('USER', 'GUEST_USER')" />
 		<security:intercept-url pattern="/cancel"
 			access="hasRole('ROLE_USER')" />
-		<security:intercept-url pattern="/admin"
-			access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/createassignment"
-			access="hasRole('ROLE_ADMIN')" />
+			access="hasAnyRole('ADMIN', 'GUEST_ADMIN')" />
 		<security:intercept-url pattern="/editassignment/*"
-			access="hasRole('ROLE_ADMIN')" />
+			access="hasAnyRole('ADMIN', 'GUEST_ADMIN')" />
 		<security:intercept-url pattern="/updateassignment"
 			access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/newclient"
-			access="hasRole('ROLE_ADMIN')" />
+			access="hasAnyRole('ADMIN', 'GUEST_ADMIN')" />
 		<security:intercept-url pattern="/createclient"
 			access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/editclient/*"
-			access="hasRole('ROLE_ADMIN')" />
+			access="hasAnyRole('ADMIN', 'GUEST_ADMIN')" />
 		<security:intercept-url pattern="/updateclient"
 			access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/clients"
-			access="hasRole('ROLE_ADMIN')" />
+			access="hasAnyRole('ADMIN', 'GUEST_ADMIN')" />
 		<security:intercept-url pattern="/volunteers"
-			access="hasRole('ROLE_ADMIN')" />
+			access="hasAnyRole('ADMIN', 'GUEST_ADMIN')" />
 		<security:intercept-url pattern="/deletevolunteer"
 			access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/**" access="denyAll" />
-		<security:form-login
-			authentication-failure-url="/login?error=true"
+		<security:form-login authentication-failure-url="/login?error=true"
 			login-processing-url="/login" login-page="/login" />
 		<security:logout logout-url="/logout"
 			logout-success-url="/loggedout" />

@@ -40,14 +40,14 @@
 					<dt class="offset-sm-3"></dt>
 					<dd class="offset-sm-3 col-sm-1">
 						<br />
-						<sec:authorize access="hasAnyRole('USER', 'GUEST')">
+						<sec:authorize access="hasAnyRole('USER', 'GUEST_USER')">
 							<c:url var="volunteerUrl" value="/volunteer" />
 							<sf:form action="${volunteerUrl}" method="post">
 								<input class="btn btn-primary" type="submit" value="Volunteer!" />
 								<input type="hidden" name="id" value="${assignment.id}" />
 							</sf:form>
 						</sec:authorize>
-						<sec:authorize access="hasRole('ROLE_ADMIN')">
+						<sec:authorize access="hasAnyRole('ADMIN', 'GUEST_ADMIN')">
 							<c:url var="editAssignmentUrl"
 								value="/editassignment/${assignment.id}" />
 							<sf:form action="${editAssignmentUrl}" method="get">

@@ -33,12 +33,12 @@ public class ClientsService {
 		return clientsDao.exists(telephone);
 	}
 
-	@Secured("ROLE_ADMIN")
+	@Secured({ "ROLE_ADMIN", "ROLE_GUEST_ADMIN" })
 	public List<Client> getAllClients() {
 		return clientsDao.getAllClients();
 	}
 
-	@Secured("ROLE_ADMIN")
+	@Secured({ "ROLE_ADMIN", "ROLE_GUEST_ADMIN" })
 	public Client getClient(int id) {
 		return clientsDao.getClient(id);
 	}

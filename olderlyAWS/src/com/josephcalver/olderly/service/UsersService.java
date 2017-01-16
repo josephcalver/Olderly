@@ -47,7 +47,7 @@ public class UsersService {
 		usersDao.deleteVolunteer(username);
 	}
 
-	@Secured("ROLE_ADMIN")
+	@Secured({ "ROLE_ADMIN", "ROLE_GUEST_ADMIN" })
 	public List<User> getAllVolunteers() {
 		return usersDao.getAllVolunteers();
 	}
