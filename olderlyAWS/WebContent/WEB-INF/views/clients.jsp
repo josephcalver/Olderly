@@ -20,7 +20,7 @@
 					<dd class="col-sm-7">
 						<c:out value="${client.id}"></c:out>
 					</dd>
-					
+
 					<dt class="col-sm-3">First Name:</dt>
 					<dd class="col-sm-7">
 						<c:out value="${client.firstName}"></c:out>
@@ -55,5 +55,5 @@
 			<br />
 			<br />
 		</c:forEach>
-
 	</div>
+</div>

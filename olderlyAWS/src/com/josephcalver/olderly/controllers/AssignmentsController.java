@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.josephcalver.olderly.models.Assignment;
 import com.josephcalver.olderly.models.Client;
 import com.josephcalver.olderly.service.AssignmentsService;
-import com.josephcalver.olderly.service.ClientsService;
 
 @Controller
 public class AssignmentsController {
